@@ -1,53 +1,61 @@
 <template>
   <div class="m-3">
-    <JsonSchemaFormType :schema="schema" v-model="value"/>
+    <json-schema-form :schema="schema" v-model="value"/>
     <div class="btn btn-primary" @click="view">查看</div>
   </div>
 </template>
 
 <script>
-import JsonSchemaFormType from "./components/JsonSchemaFormType.vue";
+import JsonSchemaForm from "./components/JsonSchemaForm.vue";
 
 export default {
-  components: { JsonSchemaFormType },
+  components: { JsonSchemaForm },
   data() {
     return {
-      value: {},
+      value: { cards: [["1", "2"]], nick: "222" },
       schema: {
-        title: "用户",
         type: "object",
         properties: {
           nick: {
             type: "string",
-            title: "昵称"
+            title: "昵称",
+            form: {
+              component: "json-schema-form-textarea"
+            }
           },
           sex: {
-            type: 'integer',
-            title: '性别',
-            anyOf: [{
-              title: '男',
-              const: 1
-            }, {
-              title: '女',
-              const: 0
-            }]
+            type: "integer",
+            title: "性别",
+            anyOf: [
+              {
+                title: "男",
+                const: 1
+              },
+              {
+                title: "女",
+                const: 0
+              }
+            ]
           },
           age: {
             type: "integer",
             title: "年龄"
           },
           groups: {
-            type: 'array',
-            title: '分组',
+            type: "array",
+            title: "分组",
             items: {
-              type: 'string',
-              anyOf: [{
-                title: '超级管理员',
-                const: 'root'
-              }, {
-                title: '普通',
-                const: 'member'
-              }]
+              type: "string",
+              anyOf: [
+                {
+                  title: "超级管理员",
+                  const: "root"
+                },
+                {
+                  title: "普通",
+                  const: "member"
+                }
+              ]
             }
           },
           isVip: {
@@ -61,7 +69,7 @@ export default {
               type: "string",
               title: "印象"
             },
-            default: ['good', 'yes']
+            default: ["good", "yes"]
           },
           cards: {
             type: "array",
