@@ -8,10 +8,8 @@
 </template>
 
 <script>
-import JsonSchemaForm from "./JsonSchemaForm.vue";
-
 export default {
-  components: { JsonSchemaForm },
+  components: { JsonSchemaForm: () => import("./JsonSchemaForm.vue") },
   props: {
     schema: Object,
     value: {}

@@ -18,11 +18,10 @@
 </template>
 
 <script>
-import JsonSchemaForm from "./JsonSchemaForm.vue";
 import JsonSchemaFormArrayMixin from "../mixins/JsonSchemaFormArrayMixin";
 
 export default {
-  components: { JsonSchemaForm },
+  components: { JsonSchemaForm: () => import("./JsonSchemaForm.vue") },
   mixins: [JsonSchemaFormArrayMixin]
 };
 </script>

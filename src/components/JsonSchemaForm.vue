@@ -3,16 +3,25 @@
 </template>
 
 <script>
+import JsonSchemaFormEmptyString from "./JsonSchemaFormEmptyString.vue";
+import JsonSchemaFormObject from "./JsonSchemaFormObject.vue";
+import JsonSchemaFormArray from "./JsonSchemaFormArray.vue";
+import JsonSchemaFormCheckbox from "./JsonSchemaFormCheckbox.vue";
+import JsonSchemaFormSelect from "./JsonSchemaFormSelect.vue";
+import JsonSchemaFormTextarea from "./JsonSchemaFormTextarea.vue";
+import JsonSchemaFormNumber from "./JsonSchemaFormNumber.vue";
+import JsonSchemaFormBoolean from "./JsonSchemaFormBoolean.vue";
+
 export default {
   components: {
-    JsonSchemaFormEmptyString: () => import("./JsonSchemaFormEmptyString.vue"),
-    JsonSchemaFormObject: () => import("./JsonSchemaFormObject.vue"),
-    JsonSchemaFormArray: () => import("./JsonSchemaFormArray.vue"),
-    JsonSchemaFormCheckbox: () => import("./JsonSchemaFormCheckbox.vue"),
-    JsonSchemaFormSelect: () => import("./JsonSchemaFormSelect.vue"),
-    JsonSchemaFormTextarea: () => import("./JsonSchemaFormTextarea.vue"),
-    JsonSchemaFormNumber: () => import("./JsonSchemaFormNumber.vue"),
-    JsonSchemaFormBoolean: () => import("./JsonSchemaFormBoolean.vue")
+    JsonSchemaFormEmptyString,
+    JsonSchemaFormObject,
+    JsonSchemaFormArray,
+    JsonSchemaFormCheckbox,
+    JsonSchemaFormSelect,
+    JsonSchemaFormTextarea,
+    JsonSchemaFormNumber,
+    JsonSchemaFormBoolean
   },
   props: {
     schema: Object,
