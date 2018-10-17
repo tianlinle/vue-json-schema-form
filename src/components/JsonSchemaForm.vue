@@ -24,7 +24,10 @@ export default {
     JsonSchemaFormBoolean
   },
   props: {
-    schema: Object,
+    schema: {
+      type: Object,
+      required: true
+    },
     value: {}
   },
   methods: {
