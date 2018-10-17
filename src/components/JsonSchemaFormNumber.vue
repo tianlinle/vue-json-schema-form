@@ -17,6 +17,11 @@ export default {
     valueCopy() {
       if (this.schema.type === "integer") {
         this.valueCopy = Number.parseInt(this.valueCopy);
+      } else {
+        this.valueCopy = Number.parseFloat(this.valueCopy);
+      }
+      if (Number.isNaN(this.valueCopy)) {
+        this.valueCopy = undefined;
       }
       this.$emit("input", this.valueCopy);
     }

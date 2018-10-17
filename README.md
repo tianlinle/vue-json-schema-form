@@ -5,4 +5,4 @@
 ```javascript
 {anyOf: [{const: 1, title: 'title1'}, {const: 2, title: 'title2'}]}
 ```
-+ return undefined if text input or number input is empty.
++ Return undefined if text input or number input is empty.
