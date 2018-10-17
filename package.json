@@ -1,13 +1,13 @@
 {
   "name": "tian-json-schema-form",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "bundle": "vue-cli-service build --target lib --name myLib ./src/components/JsonSchemaForm.vue"
+    "bundle": "vue-cli-service build --target lib --name tian-json-schema-form ./src/components/JsonSchemaForm.vue"
   },
-  "main": "",
+  "main": "./dist/tian-json-schema-form.common.js",
   "dependencies": {
     "vue": "^2.5.17"
   },
